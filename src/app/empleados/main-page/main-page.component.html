@@ -1,0 +1,16 @@
+<h1>Seguros Bolivar - Página Principal</h1>
+<hr>
+
+<div class="row">
+    <div class="col">
+        <app-mis-empleados [empleadosHijo]="empleados"></app-mis-empleados>
+    </div>
+
+    <div class="col">
+        <app-agregar 
+            [nuevo]="nuevo"
+            (onNuevoEmpleado)="agregarNuevoEmpleado( $event )"
+        ></app-agregar>
+    </div>
+</div>
+

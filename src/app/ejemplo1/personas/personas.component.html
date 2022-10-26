@@ -1,0 +1,20 @@
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <h1>Listado de Personas</h1>
+      <button class='btn btn-primary' 
+        [disabled]='deshabilitar'
+        (click)='mostrarPersona()'>Mostrar Personas</button>
+
+        <p *ngIf="mostrar; else sinPersona"><app-persona></app-persona></p>
+        <ng-template #sinPersona>
+          <p>No se muestra ninguna persona</p>
+        </ng-template>
+
+      <label>Título Persona</label>
+      <input type="text" class='form-control' 
+        [(ngModel)]='titulo' >
+      {{titulo}}
+    </div>
+  </div>
+</div>

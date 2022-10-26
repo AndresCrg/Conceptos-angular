@@ -1,0 +1,7 @@
+<div *ngFor="let persona of personas">
+    <ul [ngSwitch]="persona.genero">
+        <li>{{persona.nombre | titlecase}} {{persona.apellido | lowercase}}: {{persona.edad}} años, Fecha Nacimiento: {{persona.fechaNacim | date}}</li>
+        <p *ngSwitchCase="'M'">Masculino</p>
+        <p *ngSwitchCase="'F'">Femenino</p>
+    </ul>
+</div>

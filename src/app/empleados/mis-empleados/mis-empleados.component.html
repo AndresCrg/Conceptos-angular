@@ -1,0 +1,7 @@
+<h3>Empleados</h3>
+        <hr>
+        <ul>
+            <li *ngFor="let empleado of empleados">
+                {{empleado.nombre}} - {{empleado.salario | currency}} - {{empleado.fechaContratacion | date}}
+            </li>
+        </ul>
