@@ -14,3 +14,25 @@
     </div>
 </div>
 
+<hr>
+
+<div class="row">
+    <div class="col">
+        <p>
+            Saludos {{ nombre }}, es un placer 
+            {{ genero | i18nSelect:invitacionMapa }}
+            a nuestro evento.
+        </p>
+        <button (click)="cambiarCliente()"> Cambiar nombre </button>
+    </div>
+
+    <div class="col">
+        <p>
+            Actualmente {{ clientes.length | i18nPlural:clientesMapa }}
+        </p>
+
+        <button (click)="borrarCliente()"> Borrar Cliente
+        </button>
+    </div>
+</div>
+
